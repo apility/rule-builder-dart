@@ -54,6 +54,7 @@ abstract class GroupDateRule extends DateRule {
 }
 
 abstract class _GroupRuleImplementation extends GroupDateRule {
+  @override
   final List<DateRule> children;
 
   _GroupRuleImplementation(this.children, [String? id, String? name])
@@ -87,7 +88,9 @@ class _AllGroupRule extends _GroupRuleImplementation {
 }
 
 class _NoChildrenRule extends GroupDateRule {
+  @override
   final GroupType type;
+
   _NoChildrenRule(this.type, [String? id, String? name]) : super(id, name);
 
   @override

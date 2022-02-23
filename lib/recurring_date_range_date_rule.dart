@@ -37,10 +37,8 @@ class _YearlyDateRangeRule extends RecurringDateRangeDateRule {
   final DateTime from;
   final DateTime to;
 
-  _YearlyDateRangeRule(DateTime from, DateTime to, [String? id, String? name])
-      : from = from,
-        to = to,
-        super(
+  _YearlyDateRangeRule(this.from, this.to, [String? id, String? name])
+      : super(
           id,
           name,
         );

@@ -1,13 +1,12 @@
+import 'package:date_rule/date_rule.dart';
 import 'package:test/test.dart';
-
-import '../bin/date_rule.dart';
 
 void runTestOnRange(List<int> years, List<String> _validDates,
     List<String> _invalidDates, DateRule rule) {
   final validDates = _validDates.map((date) => DateTime.parse(date));
   final invalidDates = _invalidDates.map((date) => DateTime.parse(date));
 
-  years.forEach((element) {
+  for (var element in years) {
     group("it validates correctly for days of year $element", () {
       validDates
           .map((date) => DateTime(element, date.month, date.day))
@@ -28,7 +27,7 @@ void runTestOnRange(List<int> years, List<String> _validDates,
         });
       });
     });
-  });
+  }
 }
 
 void main() {

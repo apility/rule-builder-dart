@@ -1,8 +1,7 @@
 import 'dart:convert';
 
+import 'package:date_rule/date_rule.dart';
 import 'package:test/test.dart';
-
-import '../bin/date_rule.dart';
 
 void main() {
   group("jsonDecoding works", () {
@@ -98,13 +97,12 @@ void main() {
 
         expect(rule is GroupDateRule, true);
         expect((rule as GroupDateRule).children.first is NotRule, true,
-            reason:
-                "type is actually: ${(rule as GroupDateRule).children.first.runtimeType}");
+            reason: "type is actually: ${rule.children.first.runtimeType}");
       });
 
       test("throws invalid format exception if count is unmatchable", () {
         try {
-          var rule = DateRule.parse({
+          DateRule.parse({
             'type': 'group',
             'count': 'alles',
             'children': [

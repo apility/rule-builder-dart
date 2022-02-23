@@ -5,6 +5,7 @@ abstract class DateRuleException implements Exception {
 
   DateRuleException(this.message);
 
+  @override
   String toString() => "$runtimeType($message)";
 }
 

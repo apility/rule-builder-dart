@@ -1,14 +1,13 @@
 name: date_rule
 description: Parses Apility Date Rules
 
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/apility/rule-builder-dart
 environment:
   sdk: '>=2.16.1 <3.0.0'
 
-
 dependencies:
-  uuid: ^3.0.5
+  uuid: any
 
 dev_dependencies:
   lints: ^1.0.0

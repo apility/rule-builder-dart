@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import '../bin/date_rule.dart';
+import 'package:date_rule/date_rule.dart';
 
 void main() {
   group("#DayOfWeekDateRule", () {
